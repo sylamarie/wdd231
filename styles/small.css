@@ -1,0 +1,205 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #0044cc;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile h1 {
+    font-size: 1.5rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Navigation */
+#menu-button {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+#nav-menu {
+    display: none;
+    background: #002080;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+}
+
+#nav-menu ul {
+    list-style: none;
+    flex-direction: column;
+}
+
+#nav-menu ul li {
+    padding: 10px 0;
+}
+
+#nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 15px;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Show menu when active */
+#nav-menu.active {
+    display: block;
+}
+
+/* Hover Effects */
+#nav-menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Wayfinding - Active Page */
+#nav-menu ul li .active {
+    background: white;
+    color: #0044cc;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Course Work Section */
+.coursework ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.coursework h2 {
+    background-color: #002080;
+    color: #ecf0f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.coursework li {
+    background: #ddd;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.course-card {
+    background: #eee;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.completed {
+    background: #c3e6cb; /* Green for completed courses */
+    border-left: 5px solid #155724;
+}
+
+
+/* Certificates Section */
+.certificates {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.certificates h2 {
+    background-color: #002080;
+    color: #ecf0f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.certificates .buttons {
+    margin-bottom: 10px;
+}
+
+.certificates .buttons button {
+    padding: 10px 60px; /* Increase top-bottom and left-right padding */
+    border-radius: 5px;
+    background-color: #002080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.certificates .buttons button:hover {
+    background-color: white;
+    color: #002080;
+}
+
+/* Location Section */
+.location img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.location h2 {
+    background-color: #002080;
+    color: #ecf0f1;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #0044cc;
+    color: white;
+    padding: 1rem;
+    margin-top: 20px;
+}
+
+#lastModified {
+    font-size: 0.9rem;
+}
