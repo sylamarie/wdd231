@@ -1,12 +1,11 @@
 // Course List Array
 const courses = [
-    { code: "WDD 130", name: "Web Fundamentals", credits: 2, completed: true },
-    { code: "WDD 231", name: "Frontend Development", credits: 2, completed: true },
-    { code: "WDD 331", name: "Advanced CSS and JS", credits: 2, completed: true },
-    { code: "CSE 110", name: "Programming Building Blocks", credits: 2, completed: true },
+    { code: "CSE 110", name: "Introduction to Programming", credits: 2, completed: true },
     { code: "CSE 111", name: "Programming with Functions", credits: 2, completed: true },
     { code: "CSE 210", name: "Programming with Classes", credits: 2, completed: true },
-    { code: "CSE 212", name: "Data Structures", credits: 2, completed: false }
+    { code: "WDD 130", name: "Web Fundamentals", credits: 2, completed: true },
+    { code: "WDD 131", name: "Dynamic Web Fundamentals", credits: 2, completed: true },
+    { code: "WDD 231", name: "Web Frontend Development I", credits: 2, completed: false },
 ];
 
 // Function to Display Courses
