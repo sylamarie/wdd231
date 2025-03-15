@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Bangui Windmills",
+        "address": "Bangui, Ilocos Norte, Ilocos Norte, Philippines",
+        "phone": "Ilocos Norte, ID 122723",
+        "website": "https://www.ilocosnorte.ph",
+        "image": "images/bangui_windmills.jpg",
+        "membership": 3
+    },
+    {
+        "name": "Saud Beach",
+        "address": "Pagudpud, Ilocos Norte, Philippines",
+        "phone": "Ilocos Norte, ID 122723",
+        "website": "https://www.laoagcityhotel.com",
+        "image": "images/pagudpud.jpg",
+        "membership": 2
+    },
+    {
+        "name": "Pangil Coral Rock Formation",
+        "address": "Currimao, Ilocos Norte",
+        "phone": "Ilocos Norte, ID 122723",
+        "website": "https://www.ilocanofoodhub.com",
+        "image": "images/curimao.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Paoay Sand Dunes Adventure",
+        "address": "Paoay, Ilocos Norte",
+        "phone": "Ilocos Norte, ID 122723",
+        "website": "https://www.sanddunespaoay.com",
+        "image": "images/paoay_sand_dunes.jpg",
+        "membership": 3
+    },
+    {
+        "name": "Kapurpurawan Rock Formation",
+        "address": "Burgos, Ilocos Norte, Philippines",
+        "phone": "Ilocos Norte, ID 122723",
+        "website": "https://www.northluzontravel.com",
+        "image": "images/kapurpurawan.jpg",
+        "membership": 2
+    },
+    {
+        "name": "Bantay Abot Cave",
+        "address": "Pagudpud, Ilocos Norte, Philippines",
+        "phone": "Ilocos Norte, ID 12272",
+        "website": "https://www.empanadailocandia.com",
+        "image": "images/bantay_abot.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Tanap-Avis Falls",
+        "address": "Burgos, Ilocos Norte, Philippines",
+        "phone": "Ilocos Norte, ID 12272",
+        "website": "https://www.ilocosnortecrafts.com",
+        "image": "images/tanap.jpg",
+        "membership": 2
+    }
+]

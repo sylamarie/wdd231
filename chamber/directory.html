@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory - Ilocos Norte Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/larger_directory.css">
+    <link rel="stylesheet" href="styles/small_directory.css">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <script defer src="scripts/directory.js"></script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <img src="images/ilocos_norte.png" alt="Chamber Logo" class="logo">
+        <h1>Ilocos Norte Chamber of Commerce</h1>
+
+        <div class="menu-toggle" id="menu-toggle" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Business Directory</h2>
+    
+    <div class="view-toggle">
+        <button id="gridView">Grid View</button>
+        <button id="listView">List View</button>
+    </div>
+
+    <div id="members-container" class="grid"></div>
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> Ilocos Norte Chamber of Commerce</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+</footer>
+
+</body>
+</html>
