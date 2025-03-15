@@ -11,24 +11,27 @@
     <link rel="icon" type="image/png" href="images/favicon.ico">
     <meta property="og:title" content="Directory - Ilocos Norte Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/ilocos_norte.png">
-    <meta property="og:url" content="https://sylamarie.github.io/wdd231/">
+    <meta property="og:image" content="https://sylamarie.github.io/wdd231/images/ilocos_norte.png">
+    <meta property="og:url" content="https://sylamarie.github.io/wdd231/directory.html">
     <meta property="og:description" content="Find businesses and services in Ilocos Norte with our comprehensive Chamber of Commerce directory.">
     <script defer src="scripts/directory.js"></script>
 </head>
 <body>
 
 <header>
+    <h1>Ilocos Norte Chamber of Commerce</h1>  <!-- Moved outside <nav> -->
+        
     <nav class="navbar">
         <img src="images/ilocos_norte.png" alt="Chamber Logo" class="logo">
-        <h1>Ilocos Norte Chamber of Commerce</h1>
-
-        <div class="menu-toggle" id="menu-toggle" aria-expanded="false">
+    
+        <!-- Menu Toggle Button (For Mobile) -->
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </div>
-
+        </button>
+    
+        <!-- Navigation Links -->
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="discover.html">Discover</a></li>
