@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore the official business directory of the Ilocos Norte Chamber of Commerce. Find local businesses, services, and industry leaders in the region.">
     <meta name="author" content="Syla Marie Cumuyog">
-    <title>Directory - Ilocos Norte Chamber of Commerce</title>
+    <title>Directory | Ilocos Norte Chamber of Commerce</title>
+
     <link rel="stylesheet" href="styles/larger_directory.css">
     <link rel="stylesheet" href="styles/small_directory.css">
     <link rel="icon" type="image/png" href="images/favicon.ico">
-    <meta property="og:title" content="Directory - Ilocos Norte Chamber of Commerce">
+
+    <meta property="og:title" content="Directory | Ilocos Norte Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://sylamarie.github.io/wdd231/images/ilocos_norte.png">
-    <meta property="og:url" content="https://sylamarie.github.io/wdd231/directory.html">
+    <meta property="og:image" content="images/ilocos_norte.png"> <!-- Ensure Correct Path -->
+    <meta property="og:url" content="/directory.html"> <!-- Local Path for Deployment -->
     <meta property="og:description" content="Find businesses and services in Ilocos Norte with our comprehensive Chamber of Commerce directory.">
+
     <script defer src="scripts/directory.js"></script>
 </head>
 <body>
 
 <header>
-    <h1>Ilocos Norte Chamber of Commerce</h1>  <!-- Moved outside <nav> -->
+    <h1>Directory | Ilocos Norte Chamber of Commerce</h1>  <!-- Improved Title Matching -->
         
     <nav class="navbar">
-        <img src="images/ilocos_norte.png" alt="Chamber Logo" class="logo">
+        <img src="images/ilocos_norte.png" alt="Ilocos Norte Chamber of Commerce Logo" class="logo">
     
         <!-- Menu Toggle Button (For Mobile) -->
         <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links">
@@ -42,8 +45,8 @@
 </header>
 
 <main>
-    <h2>Business Directory</h2>
-    
+    <h2>Explore Local Businesses</h2> <!-- Improved Heading -->
+
     <div class="view-toggle">
         <button id="gridView">Grid View</button>
         <button id="listView">List View</button>
@@ -56,6 +59,11 @@
     <p>&copy; <span id="year"></span> Ilocos Norte Chamber of Commerce</p>
     <p>Last Updated: <span id="lastModified"></span></p>
 </footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+</script>
 
 </body>
 </html>
