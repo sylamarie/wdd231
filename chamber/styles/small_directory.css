@@ -1,49 +1,60 @@
 @media (max-width: 768px) {
-    /* Adjust Header Layout */
+    /* Header Layout - Logo Left, Title Center, Menu Right */
+    /* Header Styling */
     header {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        text-align: center;
+        justify-content: space-between; /* Ensures proper spacing */
+        background-color: #004aad; /* Keeps the blue background */
+        padding: 10px 15px;
+        width: 100%;
+        height: 60px;
         position: relative;
-        padding: 15px;
+        padding-bottom: 20px;
     }
 
-    /* Logo - Positioned at the Left Corner */
+    /* Logo Styling */
     .logo {
         width: 60px;
         height: auto;
-        position: absolute;
-        top: 10px;
-        left: 15px;
     }
 
     /* Title Styling */
     header h1 {
-        font-size: 24px;
-        margin-top: 15px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        flex-grow: 1; /* Allows centering */
+        margin: 0;
     }
 
-    /* Hamburger Menu Toggle */
+    /* Hamburger Menu */
     .menu-toggle {
-        display: flex;
-        flex-direction: column;
+        /* display: block; */
+        /* flex-direction: column; */
+        /* cursor: pointer; */
+        /* position: relative; Keep inside header */
+        /* right: 0; Aligns to the right */
+        padding: 10px;
+        border: none; 
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
         cursor: pointer;
-        position: absolute;
-        top: 15px;
-        right: 40px;
+        color: white;
     }
 
+    /* Hamburger Bars */
     .bar {
-        display: block;
         width: 25px;
         height: 3px;
-        margin: 5px auto;
+        margin: 4px 0;
         background-color: white;
         transition: 0.3s;
     }
 
-    /* Navigation Links (Initially Hidden) */
+    /* Navigation Menu */
     .nav-links {
         display: none;
         flex-direction: column;
@@ -56,12 +67,10 @@
         z-index: 1000;
     }
 
-    /* Show Navigation Links When Active */
     .nav-links.active {
         display: flex;
     }
 
-    /* Navigation Links Styling */
     .nav-links li {
         display: block;
         padding: 12px;
@@ -76,47 +85,67 @@
 
     .nav-links a:hover {
         background-color: white;
+        color: #004aad;
     }
-}
 
-/* List Container */
-.list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-}
+    /* List Container */
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+    }
 
-/* List Item Styling */
-.list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    padding: 15px;
-    font-size: 18px;
-    border-radius: 5px;
-}
+    /* List Item Styling */
+    .list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 5px;
+    }
 
-/* Alternating Background Colors */
-.list-item:nth-child(odd) {
-    background-color: #5a5f40; /* Dark greenish */
-    color: #222; /* Dark text */
-}
+    /* Alternating Background Colors */
+    .list-item:nth-child(odd) {
+        background-color: #5a5f40; /* Dark greenish */
+        color: #222; /* Dark text */
+    }
 
-.list-item:nth-child(even) {
-    background-color: #a5ad89; /* Light greenish */
-    color: #222; /* Dark text */
-}
+    .list-item:nth-child(even) {
+        background-color: #a5ad89; /* Light greenish */
+        color: #222; /* Dark text */
+    }
 
-/* Website Link */
-.list-item a {
-    text-decoration: none;
-    color: #004aad; /* Blue link */
-    font-weight: bold;
-}
+    /* Website Link */
+    .list-item a {
+        text-decoration: none;
+        color: #004aad; /* Blue link */
+        font-weight: bold;
+    }
 
-.list-item a:hover {
-    text-decoration: underline;
+    .list-item a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer - Prevents Layout Shifts */
+    footer {
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+        background-color: #004aad;
+        color: white;
+        position: relative;
+        min-height: 60px; /* Reserves space to prevent shifting */
+    }
+
+    /* Paragraph Styling (Prevents Layout Shifts) */
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 10px 0;
+        min-height: 24px; /* Reserves space for short paragraphs */
+    }
 }
