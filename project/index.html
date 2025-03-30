@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner & Budget Tracker</title>
+    <link rel="stylesheet" href="style/project.css">
+    <script src="script/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Daily Planner & Budget Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="planner.html">Daily Planner</a></li>
+                <li><a href="#todo">To-Do & Goals</a></li>
+                <li><a href="#budget">Budget Tracker</a></li>
+                <li><a href="#quotes">Daily Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Your Daily Planner & Budget Tracker</h2>
+        <div class="home-content">
+            <p>Plan your day, set goals, track your budget, and stay inspired with daily quotes!</p>
+            <div id="clock"></div>
+        </div>
+    </section>
+
+    <section id="planner">
+        <h2>Daily Planner</h2>
+        <div class="content">
+            <img src="planner-image.jpg" alt="Daily Planner" class="section-img">
+            <div id="schedule">
+                <h3>Today's Schedule</h3>
+                <div id="timeSlots"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="todo">
+        <h2>To-Do List & Goals</h2>
+        <div class="content">
+            <img src="todo-image.jpg" alt="To-Do List" class="section-img">
+            <div id="tasks">
+                <div id="todo-list">
+                    <h3>To-Do List</h3>
+                    <input type="text" id="new-task" placeholder="New task...">
+                    <button onclick="addTask()">Add</button>
+                    <ul id="task-list"></ul>
+                </div>
+                <div id="goals">
+                    <h3>Daily Goals</h3>
+                    <input type="text" id="new-goal" placeholder="New goal...">
+                    <button onclick="addGoal()">Add</button>
+                    <ul id="goal-list"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="budget">
+        <h2>Budget Tracker</h2>
+        <div class="content">
+            <img src="budget-image.jpg" alt="Budget Tracker" class="section-img">
+            <div>
+                <input type="text" id="budget-desc" placeholder="Description">
+                <input type="number" id="budget-amount" placeholder="Amount">
+                <button onclick="addBudget()">Add</button>
+                <ul id="budget-list"></ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="quotes">
+        <h2>Daily Quote</h2>
+        <div class="content">
+            <img src="quote-image.jpg" alt="Motivational Quote" class="section-img">
+            <p id="quote"></p>
+        </div>
+    </section>
+
+    <script src="project.js"></script>
+</body>
+</html>
