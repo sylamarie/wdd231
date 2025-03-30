@@ -35,30 +35,41 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
             </ul>
         </nav>
     </header>
 
-<main>
-    <h1>Directory | Ilocos Norte Chamber of Commerce</h1>
-    <h2>Explore Local Businesses</h2>
-
-    <div class="view-toggle">
-        <button id="gridView">Grid View</button>
-        <button id="listView">List View</button>
-    </div>
-
-    <div id="members-container" class="grid"></div>
-</main>
+    <main>
+        <h1>Thank You!</h1>
+        <p>We appreciate your application. Here’s a summary of your submission:</p>
+        <div class="form-summary">
+            <p><strong>First Name:</strong> <span id="firstName"></span></p>
+            <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Mobile Number:</strong> <span id="phone"></span></p>
+            <p><strong>Business Name:</strong> <span id="organization"></span></p>
+            <p><strong>Timestamp:</strong> <span id="timestamp"></span></p>
+        </div>
+    </main>
+    
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("firstName").textContent = params.get("firstName");
+        document.getElementById("lastName").textContent = params.get("lastName");
+        document.getElementById("email").textContent = params.get("email");
+        document.getElementById("phone").textContent = params.get("phone");
+        document.getElementById("organization").textContent = params.get("organization");
+        document.getElementById("timestamp").textContent = params.get("timestamp");
+    </script>
 
 <footer>
     <p>&copy; <span id="year"></span> Ilocos Norte Chamber of Commerce</p>
     <p>Last Updated: <span id="lastModified"></span></p>
 </footer>
 
-<script src="scripts/chamber.js">
+<script>
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
 </script>
