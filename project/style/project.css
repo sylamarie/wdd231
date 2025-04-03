@@ -16,11 +16,12 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 15px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -36,80 +37,157 @@ nav ul li a:hover, .active {
     border-radius: 5px;
 }
 
-section {
-    padding: 20px;
-    text-align: center;
-}
-
-#schedule {
-    width: 50%;
-    margin: auto;
-    text-align: left;
-}
-
-#clock {
-    font-size: 24px;
-    font-weight: bold;
-    background: black;
-    color: lightpink;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-/* DAILY PLANNER */
-#planner-container {
+/* Intro Section */
+.intro {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: center; /* Centers items */
+    align-items: center;
+    padding: 20px;
+    max-width: 80%;
     margin: auto;
-    padding-top: 20px;
+    gap: 20px; /* Adds equal space between divs */
 }
 
-/* Schedule Section */
-#schedule {
-    width: 45%;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.time-block {
+/* Welcome Box (Larger) */
+.welcome {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    
-}
-
-input {
-    border: none; /* Removes the black border */
-    outline: none; /* Removes the focus outline */
-}
-
-.time-block input {
-    flex-grow: 1;
-    margin-left: 10px;
-}
-
-/* Notes Section */
-#notes {
-    width: 45%;
+    justify-content: center;
     background: white;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-basis: 400px; /* Bigger than the clock container */
+    flex-grow: 2; /* Takes more space */
+    min-width: 300px;
+    height: 160px;
 }
 
-#notes-area {
-    width: 100%;
-    height: 200px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    resize: none;
+/* Clock Container (Smaller) */
+.clock-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: lightpink;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-basis: 250px; /* Smaller */
+    flex-grow: 1; /* Takes less space */
+    min-width: 200px;
+    height: 160px;
+}
+
+/* Welcome Image */
+.welcome-image img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Time & Date */
+.clock-container p {
+    font-size: 18px; /* Smaller text size */
+    margin: 5px 0;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.grid-item {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.grid-item:hover {
+    background: lightpink;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .welcome, .clock-container {
+        flex-basis: 100%; /* Full width on smaller screens */
+        height: auto;
+    }
+}
+
+.planner-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    align-items: start;
+}
+
+.planner-item {
+    background: #ddd;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.large-box {
+    grid-column: span 2; /* Makes the large divs span 2 columns */
+    height: 150px;
+}
+
+.small-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.small-box {
+    flex: 1;
+    height: 70px;
+}
+
+.planner-item:last-child {
+    height: 150px;
+}
+
+
+
+
+footer {
+    background: black;
+    color: lightpink;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
 }

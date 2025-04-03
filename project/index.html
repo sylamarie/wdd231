@@ -3,86 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Planner & Budget Tracker</title>
+    <title>Daily Planner & Tracker</title>
     <link rel="stylesheet" href="style/project.css">
     <link rel="icon" type="image/png" href="images/favicon.ico">
     <script src="script/project.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Daily Planner & Budget Tracker</h1>
+        <h1>Daily Planner & Tracker</h1>
         <nav>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="planner.html">Daily Planner</a></li>
-                <li><a href="#todo">To-Do & Goals</a></li>
-                <li><a href="#budget">Budget Tracker</a></li>
-                <li><a href="#quotes">Daily Quote</a></li>
+                <li><a href="to-do-goals.html">To-Do & Goals</a></li>
+                <li><a href="budget.html">Budget Tracker</a></li>
+                <li><a href="quotes.html">Daily Quote</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <h2>Welcome to Your Daily Planner & Budget Tracker</h2>
-        <div class="home-content">
-            <p>Plan your day, set goals, track your budget, and stay inspired with daily quotes!</p>
-            <div id="clock"></div>
-        </div>
-    </section>
-
-    <section id="planner">
-        <h2>Daily Planner</h2>
-        <div class="content">
-            <img src="planner-image.jpg" alt="Daily Planner" class="section-img">
-            <div id="schedule">
-                <h3>Today's Schedule</h3>
-                <div id="timeSlots"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="todo">
-        <h2>To-Do List & Goals</h2>
-        <div class="content">
-            <img src="todo-image.jpg" alt="To-Do List" class="section-img">
-            <div id="tasks">
-                <div id="todo-list">
-                    <h3>To-Do List</h3>
-                    <input type="text" id="new-task" placeholder="New task...">
-                    <button onclick="addTask()">Add</button>
-                    <ul id="task-list"></ul>
+    <main>
+        <section class="intro">
+            <div class="welcome">
+                <div class="welcome-image">
+                    <img src="images/welcome-image.png" alt="Welcome Image">
                 </div>
-                <div id="goals">
-                    <h3>Daily Goals</h3>
-                    <input type="text" id="new-goal" placeholder="New goal...">
-                    <button onclick="addGoal()">Add</button>
-                    <ul id="goal-list"></ul>
+                <div class="welcome-text">
+                    <h2>Welcome to your Daily Planner & Tracker</h2>
+                    <p>Plan your day, set goals, track your budget, and stay inspired with daily quotes!</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="budget">
-        <h2>Budget Tracker</h2>
-        <div class="content">
-            <img src="budget-image.jpg" alt="Budget Tracker" class="section-img">
-            <div>
-                <input type="text" id="budget-desc" placeholder="Description">
-                <input type="number" id="budget-amount" placeholder="Amount">
-                <button onclick="addBudget()">Add</button>
-                <ul id="budget-list"></ul>
+            <div class="clock-container">
+                <h2 id="clock"></h2>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="quotes">
-        <h2>Daily Quote</h2>
-        <div class="content">
-            <img src="quote-image.jpg" alt="Motivational Quote" class="section-img">
-            <p id="quote"></p>
-        </div>
-    </section>
+        <section class="planner-container">
+            <div class="planner-item large-box">Daily Planner</div>
+            <div class="small-boxes">
+                <div class="planner-item small-box">To-Do List</div>
+                <div class="planner-item small-box">Daily Goals</div>
+            </div>
+            <div class="planner-item large-box">Budget Tracker</div>
+            <div class="planner-item">Daily Quote</div>
+        </section>        
 
-    <script src="project.js"></script>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Daily Planner & Budget Tracker. All Rights Reserved.</p>
+    </footer>
+    
 </body>
 </html>
