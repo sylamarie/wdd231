@@ -346,35 +346,34 @@ main {
 .weather-forecast p {
     font-size: 16px;
     color: black;
+    font-weight: bold;
 }
 
 /* Weather Styling */
 #temperature {
     font-size: 24px;
     font-weight: bold;
-    color: #ff6600;
 }
 
 #weather-description {
     text-transform: capitalize;
     font-style: italic;
+    font-weight: bold;
 }
 
 /* High & Low Temperature */
 #high-temp {
-    color: red;
     font-weight: bold;
 }
 
 #low-temp {
-    color: blue;
     font-weight: bold;
 }
 
 /* Sunrise & Sunset */
 #sunrise, #sunset {
     font-size: 14px;
-    color: #666;
+    font-weight: bold;
 }
 
 /* RESPONSIVE DESIGN */
