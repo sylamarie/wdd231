@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Paoay Church",
+        "image": "images/paoay_church.webp",
+        "address": "Paoay, Ilocos Norte",
+        "description": "A UNESCO World Heritage Site, famous for its earthquake baroque architecture and historical significance."
+    },
+    {
+        "name": "Bangui Windmills",
+        "image": "images/bangui_windmillss.webp",
+        "address": "Bangui, Ilocos Norte",
+        "description": "The first wind farm in Southeast Asia, offering stunning coastal views and renewable energy."
+    },
+    {
+        "name": "Kapurpurawan Rock Formation",
+        "image": "images/kapurpurawann.webp",
+        "address": "Burgos, Ilocos Norte",
+        "description": "A natural rock formation sculpted by ocean and wind forces, perfect for nature lovers."
+    },
+    {
+        "name": "Patapat Viaduct",
+        "image": "images/patapat_viaduct.webp",
+        "address": "Pagudpud, Ilocos Norte",
+        "description": "A scenic coastal bridge offering breathtaking views of the West Philippine Sea."
+    },
+    {
+        "name": "La Paz Sand Dunes",
+        "image": "images/lapaz_sand_dunes.webp",
+        "address": "Laoag City, Ilocos Norte",
+        "description": "A unique desert-like landscape where visitors can experience 4x4 rides and sandboarding."
+    },
+    {
+        "name": "Malacañang of the North",
+        "image": "images/malacanang_north.webp",
+        "address": "Paoay, Ilocos Norte",
+        "description": "A grand presidential residence-turned-museum showcasing the Marcos family's history."
+    },
+    {
+        "name": "Pagudpud Beaches",
+        "image": "images/pagudpud_beach.webp",
+        "address": "Pagudpud, Ilocos Norte",
+        "description": "Pristine white sand beaches with crystal-clear waters, perfect for relaxation and water activities."
+    },
+    {
+        "name": "Sinking Bell Tower",
+        "image": "images/sinking_bell_tower.webp",
+        "address": "Laoag City, Ilocos Norte",
+        "description": "A historic bell tower that gradually sinks into the ground due to its heavy structure."
+    }
+]

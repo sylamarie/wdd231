@@ -135,3 +135,51 @@ if (spotlightContainer) {
             spotlightContainer.innerHTML = "<p>Spotlight data unavailable.</p>";
         });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("data/discover.json")
+        .then(response => response.json())
+        .then(data => {
+            const discoverGrid = document.getElementById("discoverGrid");
+
+            data.forEach(place => {
+                let card = document.createElement("div");
+                card.classList.add("discover-card");
+
+                card.innerHTML = `
+                    <h2>${place.name}</h2>
+                    <figure>
+                        <img src="${place.image}" alt="${place.name}">
+                    </figure>
+                    <address>${place.address}</address>
+                    <p>${place.description}</p>
+                    <button>Learn More</button>
+                `;
+
+                discoverGrid.appendChild(card);
+            });
+        })
+        .catch(error => console.error("Error loading discover data:", error));
+});
+
+function trackVisitor() {
+    let lastVisit = localStorage.getItem("lastVisit");
+    let message = document.getElementById("visitorMessage");
+    let now = Date.now();
+
+    if (!lastVisit) {
+        message.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+        let daysPassed = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+
+        if (daysPassed < 1) {
+            message.textContent = "Back so soon! Awesome!";
+        } else {
+            message.textContent = `You last visited ${daysPassed} day${daysPassed > 1 ? "s" : ""} ago.`;
+        }
+    }
+
+    localStorage.setItem("lastVisit", now);
+}
+
+document.addEventListener("DOMContentLoaded", trackVisitor);

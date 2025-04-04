@@ -30,19 +30,15 @@
 
     /* Hamburger Menu */
     .menu-toggle {
-        /* display: block; */
-        /* flex-direction: column; */
-        /* cursor: pointer; */
-        /* position: relative; Keep inside header */
-        /* right: 0; Aligns to the right */
         padding: 10px;
         border: none; 
         display: block;
         background: none;
-        border: none;
         font-size: 1.8rem;
         cursor: pointer;
         color: white;
+        border-radius: 8px; /* Optional: rounded corners */
+        transition: background-color 0.3s, color 0.3s;
     }
 
     /* Hamburger Bars */
@@ -51,7 +47,16 @@
         height: 3px;
         margin: 4px 0;
         background-color: white;
-        transition: 0.3s;
+        transition: background-color 0.3s;
+    }
+
+    /* 🔥 HOVER EFFECT */
+    .menu-toggle:hover {
+        background-color: white; /* background turns white */
+    }
+
+    .menu-toggle:hover .bar {
+        background-color: #285730; /* bars turn green */
     }
 
     /* Navigation Menu */

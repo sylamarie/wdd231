@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the official business home of the Ilocos Norte Chamber of Commerce. Find local businesses, services, and industry leaders in the region.">
+    <meta name="author" content="Syla Marie Cumuyog">
+    <title>Discover | Ilocos Norte Chamber of Commerce</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/larger_directory.css">
+    <link rel="stylesheet" href="styles/small_directory.css">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Home | Ilocos Norte Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sylamarie.github.io/wdd231/chamber/images/ilocos-norte.png">
+    <meta property="og:url" content="https://sylamarie.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="Find businesses and services in Ilocos Norte with our comprehensive Chamber of Commerce directory.">
+
+    <script defer src="scripts/discover.js"></script>
+    <script defer src="scripts/chamber.js"></script>
+
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <img src="images/ilocos_norte.png" alt="Ilocos Norte Chamber of Commerce Logo" class="logo">
+    
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
+                <span class="sr-only">Menu</span> <!-- Screen reader text -->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+    
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Discover Ilocos Norte</h1>
+    
+        <section id="places-container" class="grid-container">
+            <!-- Cards will be inserted here dynamically using JavaScript -->
+        </section>
+    
+        <!-- Modal Structure -->
+        <div id="infoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title"></h2>
+                <p><strong>📍 Location:</strong> <span id="modal-address"></span></p>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </main>    
+
+<footer>
+    <p>&copy; <span id="year"></span> Ilocos Norte Chamber of Commerce</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+</script>
+
+</body>
+</html>
