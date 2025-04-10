@@ -611,7 +611,7 @@ main {
 }
 
 .membership-application button {
-    background: #007bff;
+    background: #285730;
     color: white;
     padding: 10px;
     border: none;
@@ -621,7 +621,8 @@ main {
 }
 
 .membership-application button:hover {
-    background: #0056b3;
+    background: white;
+    color: #285730;
 }
 
 /* Discover */
