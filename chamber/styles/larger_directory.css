@@ -687,6 +687,7 @@ main {
     border-radius: 12px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
     padding: 16px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -724,4 +725,12 @@ main {
 
 .card button:hover {
     background-color: #ffffff;
+}
+
+.visit-message {
+    background-color: #e0f7fa;
+    color: #004d40;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
 }

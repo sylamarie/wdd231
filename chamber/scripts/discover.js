@@ -6,19 +6,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalDescription = document.getElementById("modal-description");
     const closeModal = document.querySelector(".close");
 
-    // Fetch data from JSON
+    // Show custom visit message
+    showVisitMessage();
+
+    // Fetch data from JSON and display cards
     fetch("data/discover.json")
         .then(response => response.json())
         .then(places => {
             places.forEach(place => {
                 // Create card
                 const card = document.createElement("div");
-                card.classList.add("card");
+                card.classList.add("card", "discover-card");
 
-                // Add content
+                // Add content with lazy loading
                 card.innerHTML = `
                     <h3>${place.name}</h3>
-                    <img src="${place.image}" alt="${place.name}">
+                    <img loading="lazy" src="${place.image}" alt="${place.name}">
+                    <p>${place.address}</p>
                     <button class="learn-more" data-name="${place.name}" data-address="${place.address}" data-description="${place.description}">
                         Learn More
                     </button>
@@ -52,3 +56,22 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error fetching data:", error));
 });
+
+// Custom Visit Message Function
+function showVisitMessage() {
+    const now = new Date();
+    const lastVisit = localStorage.getItem("lastVisit");
+    const messageContainer = document.createElement("div");
+    messageContainer.classList.add("visit-message");
+
+    if (lastVisit) {
+        const lastVisitDate = new Date(lastVisit);
+        const daysSinceLast = Math.floor((now - lastVisitDate) / (1000 * 60 * 60 * 24));
+        messageContainer.textContent = `Welcome back! It's been ${daysSinceLast} day(s) since your last visit.`;
+    } else {
+        messageContainer.textContent = "Welcome! This is your first time visiting this page.";
+    }
+
+    document.body.prepend(messageContainer);
+    localStorage.setItem("lastVisit", now);
+}
