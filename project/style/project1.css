@@ -152,8 +152,9 @@ header .navbar {
     height: 400px;
 }
 
-/* Responsive media query code for max width 900px */
-@media screen and (max-width: 900px) {
+
+/* Responsive media query code for max width 400px */
+@media screen and (max-width: 480px) {
     .navbar .nav-menu {
         display: block;
         position: fixed;
@@ -169,7 +170,7 @@ header .navbar {
         transition: left 0.2s ease;
     }}
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 480px) {
         .navbar .nav-menu .nav-link:hover {
           background-color: black;
           color: lightpink;
@@ -237,8 +238,377 @@ header .navbar {
     .hero-section .hero-image-wrapper {
         max-width: 590px;
         margin-right: 0;
-    }
+    } 
 
-    
+    .hero-image {
+        height: 300px;
+    }
 }
 
+/* Responsive media query code for medium mobile view only */
+@media screen and (max-width: 767px) and (min-width: 481px) {
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: lightpink;
+        transition: left 0.2s ease;
+    }
+
+    .navbar .nav-menu .nav-link:hover {
+        background-color: black;
+        color: lightpink;
+    }
+
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar :where(#menu-close-button, #menu-open-button) {
+        display: block;
+        font-size: 25px;
+    }
+
+    .navbar #menu-close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .navbar #menu-open-button {
+        color: lightpink;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: black;
+        display: block;
+        margin-top: 17px;
+        font-size: 14px;
+    }
+
+    .navbar .nav-menu .nav-link.active {
+        background-color: black;
+        color: lightpink;
+        font-weight: 600;
+    }
+
+    .hero-section .section-content {
+        gap: 50px;
+        text-align: center;
+        padding: 40px 30px 30px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .hero-section .hero-details :is(.subtitle, .description) {
+        max-width: 100%;
+    }
+
+    .hero-section .hero-details .buttons {
+        justify-content: center;
+    }
+
+    .hero-section .hero-image-wrapper {
+        max-width: 700px;
+        margin-right: 0;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+}
+
+
+
+
+
+
+/* Daily Planner */
+.container {
+    position: relative;
+    width: 1200px;
+    min-height: 850px;
+    margin: 0 auto;
+    padding: px;
+    color:white;
+    display: flex;
+    background-color: black;
+}
+
+.left {
+    width: 60%;
+    padding: 20px;
+}
+
+.calendar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: black;
+    border-radius: 5px;
+    background-color: pink;
+}
+
+.calendar::before,
+.calendar::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 12px;
+    height: 97%;
+    border-radius: 0 5px 5px 0;
+    background-color: rgb(190, 136, 144);
+    transform: translateY(-50%);
+}
+
+.calendar::before {
+    height: 94%;
+    left: calc(100% + 12px);
+    background-color: rgb(131, 94, 99);
+}
+
+.calendar .month {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.calendar .month .prev, 
+.calendar .month .next {
+    cursor: pointer;
+}
+
+.calendar .month .prev:hover, 
+.calendar .month .next:hover {
+    color: lightpink;
+    background: black;
+}
+
+.calendar .weekdays {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.calendar .weekdays div {
+    width: 14.28%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar .days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.calendar .days .day {
+    width: 14.28%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: black;
+    /* background: white; */
+    border: 1px solid;
+    /* border-radius: 10px; */
+}
+
+.calendar .day:not(.prev-date, .next-date):hover {
+    /* color: black;
+    background-color: white; */
+    color: lightpink;
+    background-color: black;
+}
+
+.calendar .days .prev-date,
+.calendar .days .next-date{
+    color: rgb(170, 118, 126);
+}
+
+.calendar .days .active {
+    position: relative;
+    font-size: 2rem;
+    color: lightpink;
+    background-color: black;
+}
+
+.calendar .days .active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 2px var(lightpink);
+}
+
+.calendar .days .today {
+    font-size: 2rem;
+}
+
+.calendar .days .event {
+    position: relative;
+}
+
+.calendar .days .event::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 75%;
+    height: 6px;
+    border-radius: 30px;
+    transform: translateX(-50%);
+    background-color: black;
+}
+
+.calendar .event:hover::after {
+    background-color: lightpink;
+}
+
+.calendar .active.event::after {
+    background-color: lightpink;
+    bottom: 20px;
+}
+
+.calendar .active.event {
+    padding-bottom: 10px;
+}
+
+.calendar .goto-today {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 20px;
+    color: lightgreen;
+}
+
+.calendar .goto-today .goto {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.calendar .goto-today .goto input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    color: lightpink;
+    border-radius: 5px;
+}
+
+.calendar .goto-today button {
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: black
+}
+
+.calendar .goto-today button:hover {
+    color: lightpink;
+    background-color: black;
+}
+
+.calendar .goto-today .goto button {
+    border: none;
+    border-left: 1pz solid lightpink;
+    border-radius: 0;
+}
+
+.container .right {
+    position: relative;
+    width: 40%;
+    min-height: 100%;
+    padding: 20px 0;
+}
+
+.right .today-date {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    padding-left: 70px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.today-date .event-day {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.today-date .event-date {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(189, 188, 188);
+}
+
+.events {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+}
