@@ -162,7 +162,8 @@ header .navbar {
 }
 
 .hero-image {
-    height: 400px;
+    height: 200px;
+    padding-left: 200px;
 }
 
 
@@ -249,7 +250,9 @@ header .navbar {
     }
 
     .hero-image {
-        height: 300px;
+        margin-top: 60px;
+        height: 200px;
+        padding: 0;
     }
 }
 
@@ -260,6 +263,17 @@ header .navbar {
 
 
 /* Daily Planner */
+.planner-section {
+    min-height: 100vh;
+}
+
+.planner-section .planner-title {
+    font-size: 30px;
+    color: white;
+    font-family: "Miniver", sans-serif;
+    background: black;
+    padding-left: 20px;
+}
 .container {
     position: relative;
     width: 1200px;
@@ -446,7 +460,7 @@ header .navbar {
     justify-content: space-between;
     gap: 5px;
     padding: 0 20px;
-    color: lightgreen;
+    /* color: lightgreen; */
 }
 
 .calendar .goto-today .goto {
@@ -466,6 +480,7 @@ header .navbar {
     padding: 0 20px;
     color: lightpink;
     border-radius: 5px;
+    background: black;
 }
 
 .calendar .goto-today button {
@@ -543,3 +558,187 @@ header .navbar {
         width: 100%;
     }
 }
+
+
+
+
+
+/* To-Do & Goals Section */
+.todo-goals-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    height: 100vh;
+}
+
+.todo-goals-section .section-title {
+    text-align: center;
+    color: #000000;
+    font-size: 30px;
+    font-family: "Miniver", sans-serif;
+    font-weight: 1000;
+}
+
+
+
+.todo-goals-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.todo-column, .goals-column {
+    width: 48%;
+    background-color: black;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+button {
+    background-color: lightpink;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black;
+    /* margin-top: 10px; */
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: lightpink;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    /* margin-top: 10px; */
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightpink;
+    background-color: black;
+    color: lightpink;
+}
+
+#todo-list, #goals-list {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.todo-item, .goal-item {
+    padding: 8px 12px; 
+    margin: 5px 0;  
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.todo-school .circle {
+    border: 2px solid lightgreen;
+}
+.todo-school .circle.filled {
+    background-color: lightgreen;
+}
+
+.todo-work .circle {
+    border: 2px solid lightblue;
+}
+.todo-work .circle.filled {
+    background-color: lightblue;
+}
+
+.todo-personal .circle {
+    border: 2px solid lightcoral;
+}
+.todo-personal .circle.filled {
+    background-color: lightcoral;
+}
+
+.goal-day .circle {
+    border: 2px solid lightyellow;
+}
+.goal-day .circle.filled {
+    background-color: lightyellow;
+}
+
+.goal-week .circle {
+    border: 2px solid lightblue;
+}
+.goal-week .circle.filled {
+    background-color: lightblue;
+}
+
+.goal-month .circle {
+    border: 2px solid lightgreen;
+}
+.goal-month .circle.filled {
+    background-color: lightgreen;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* input[type="text"]:not(.visible), select:not(.visible) {
+    display: none;
+} */
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px; 
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.filled {
+    background-color: currentColor;
+}
+
+.goal-item .left {
+    display: flex;
+    align-items: center;
+}
+
+.goal-item .left .circle {
+    margin-right: 10px;  
+} 
+
+#todo-input:not(.visible),
+#todo-category:not(.visible),
+#goal-input:not(.visible),
+#goal-timeframe:not(.visible) {
+    display: none;
+}
+
+

@@ -1,0 +1,204 @@
+/* ===========================
+   GENERAL STYLES
+=========================== */
+
+/* Overall Finance Section */
+.finance-section {
+    padding: 50px 20px;
+    background-color: black;
+}
+
+/* Finance Section Title */
+.finance-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 30px;
+    font-family: "Miniver", sans-serif;
+}
+
+/* ===========================
+   BUDGET CALCULATOR STYLES
+=========================== */
+
+.budget-app {
+    padding: 40px 20px;
+}
+
+#calculator-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Calculator Form */
+.calculator-container,
+.summary-container {
+    flex: 1 1 45%;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#calculator h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.remove-expense {
+    background-color: black;
+    color: lightpink;
+    margin-left: 10px;
+}
+
+.remove-expense:hover {
+    background-color: red;
+    color: white;
+}
+
+.expense-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#result {
+    background-color: pink;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Add Expense Button */
+#add-expense {
+    background-color: lightpink;
+    color: black;
+}
+
+#add-expense:hover {
+    background-color: green;
+    color: white;
+}
+
+/* ===========================
+   BILL TRACKER STYLES
+=========================== */
+
+#bill-tracker {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#bill-tracker .form-container,
+#bill-tracker .bill-list-container {
+    width: 48%;
+    background: #f9f9f9; /* Same background as budget calculator */
+    padding: 30px; /* Same padding as budget calculator */
+    border-radius: 8px; /* Same border radius as budget calculator */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Same box shadow as budget calculator */
+}
+
+#bill-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#bill-form input[type="text"],
+#bill-form input[type="number"],
+#bill-form input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+#bill-form button {
+    padding: 10px 20px;
+    background-color:black;
+    color: pink;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#bill-form button:hover {
+    background-color: lightpink;
+    color: black;
+}
+
+.bill-list-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bill-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.bill-item button {
+    background-color: lightpink;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.bill-item button:hover {
+    background-color: #cc0000;
+}
+
+.bill-item .edit-btn {
+    background-color: black;
+}
+
+.bill-item .edit-btn:hover {
+    background-color: #009900;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width: 768px) {
+    /* Budget Calculator Section */
+    #calculator-section {
+        flex-direction: column;
+    }
+
+    /* Bill Tracker Section */
+    #bill-tracker {
+        flex-direction: column;
+    }
+
+    #bill-tracker .form-container,
+    #bill-tracker .bill-list-container {
+        width: 100%;
+    }
+}

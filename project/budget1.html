@@ -7,6 +7,7 @@
     <title>Daily Planner & Budgeting</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style/project1.css">
+    <link rel="stylesheet" href="style/budget-tracker.css">
 </head>
 <body>
     <!-- Header / Navbar -->
@@ -27,10 +28,10 @@
                     <a href="#planner" class="nav-link">Daily Planner</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">To-Do/Goals</a>
+                    <a href="#todo-goals" class="nav-link">To-Do/Goals</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Budget Tracker</a>
+                    <a href="#budget-tracker" class="nav-link">Budget Tracker</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Daily Quote</a>
@@ -43,7 +44,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section">
+        <section id="hero" class="hero-section">
             <div class="section-content">
                 <div class="hero-details">
                     <h2 class="title">Welcome to your Daily Planner & Tracker</h2>
@@ -62,7 +63,8 @@
         </section>
 
         <!-- Daily Planner Section -->
-         <section class="planner-section">
+         <section id="planner" class="planner-section">
+            <h2 class="planner-title">Daily Planner</h2>
             <div class="container">
                 <div class="left">
                     <div class="calendar">
@@ -109,9 +111,118 @@
                 </div>
             </div>
          </section>
+
+         <!-- To-do/Goals Section -->
+         <section id="todo-goals" class="todo-goals-section">
+            <h2 class="section-title">To-do List and Goals</h2>
+            <div class="todo-goals-container">
+                <div class="todo-column">
+                    <h2>To-Do List</h2>
+                    <button id="todo-column-toggle">To-Do Input</button>
+                    <div id="todo-list"></div>
+                    <input type="text" id="todo-input" class="visible" placeholder="Add a task...">
+                    <select id="todo-category" class="visible">
+                        <option value="school">School</option>
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                    </select>
+                    <button id="add-todo">Add To-Do</button>
+                </div>
+        
+                <div class="goals-column">
+                    <h2>Goals</h2>
+                    <button id="goals-column-toggle">Goals Input</button>
+                    <div id="goals-list"></div>
+                    <input type="text" id="goal-input" class="visible" placeholder="Add a goal...">
+                    <select id="goal-timeframe" class="visible">
+                        <option value="day">Day</option>
+                        <option value="week">Week</option>
+                        <option value="month">Month</option>
+                    </select>
+                    <button id="add-goal">Add Goal</button>
+                </div>
+            </div>
+        </section>
+
+       <!-- Budget Calculator -->
+        <!-- Budget Tracker -->
+        <section id="finance-tools" class="finance-section">
+            <h2 class="finance-title">Budget Tracker</h2>
+
+            <div class="budget-app">
+                <section id="calculator-section">
+                <div class="calculator-container">
+                    <div id="calculator">
+                    <h2>Budgeting Calculator</h2>
+                    <form id="budget-form">
+                        <label for="income-month">Month of Income:</label>
+                        <input type="month" id="income-month" required />
+            
+                        <label for="income">Monthly Income:</label>
+                        <input type="number" id="income" placeholder="Enter your income" required />
+            
+                        <label>Expense Types:</label>
+                        <div id="expenses-container">
+                        <div class="expense-item">
+                            <select class="expense-type">
+                            <option value="Rent">Rent</option>
+                            <option value="Groceries">Groceries</option>
+                            <option value="Utilities">Utilities</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Other">Other</option>
+                            </select>
+                            <input type="number" class="expense-amount" placeholder="Amount" required />
+                            <button type="button" class="remove-expense">Remove</button>
+                        </div>
+                        </div>
+            
+                        <button type="button" id="add-expense">Add Another Expense</button>
+                        <button type="submit">Calculate Budget</button>
+                    </form>
+                    </div>
+                </div>
+            
+                <div class="summary-container">
+                    <div id="result"></div>
+                    <h3>Past Budget Summaries</h3>
+                    <div id="past-budgets"></div>
+                </div>
+                </section>
+            </div>
+    
+
+            <!-- Bill Tracker -->
+            <div id="bill-tracker">
+                <div class="form-container">
+                <h2>Track Your Bills</h2>
+                <form id="bill-form">
+                    <label for="bill-name">Bill Name:</label>
+                    <input type="text" id="bill-name" placeholder="Enter bill name" required />
+            
+                    <label for="bill-amount">Amount:</label>
+                    <input type="number" id="bill-amount" placeholder="Enter bill amount" required />
+            
+                    <label for="bill-due-date">Due Date:</label>
+                    <input type="date" id="bill-due-date" required />
+            
+                    <button type="submit">Add Bill</button>
+                </form>
+                </div>
+            
+                <div class="bill-list-container">
+                <h3>Your Bills</h3>
+                <ul id="bill-list"></ul>
+                </div>
+            </div>
+
+
+        </section>   
     </main>
 
     <script src="script/budget1.js"></script>
     <script src="script/planner.js"></script>
+    <script src="script/todo-goals.js"></script>
+    <script src="script/budget-tracker.js"></script>
 </body>
 </html>
