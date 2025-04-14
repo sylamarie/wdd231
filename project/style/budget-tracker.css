@@ -1,7 +1,3 @@
-/* ===========================
-   GENERAL STYLES
-=========================== */
-
 /* Overall Finance Section */
 .finance-section {
     padding: 50px 20px;
@@ -17,10 +13,7 @@
     font-family: "Miniver", sans-serif;
 }
 
-/* ===========================
-   BUDGET CALCULATOR STYLES
-=========================== */
-
+/* budget calculator */
 .budget-app {
     padding: 40px 20px;
 }
@@ -98,10 +91,7 @@ form select {
     color: white;
 }
 
-/* ===========================
-   BILL TRACKER STYLES
-=========================== */
-
+/* Bill tracker */
 #bill-tracker {
     display: flex;
     justify-content: space-between;
@@ -114,7 +104,7 @@ form select {
 #bill-tracker .bill-list-container {
     width: 48%;
     background: #f9f9f9; /* Same background as budget calculator */
-    padding: 30px; /* Same padding as budget calculator */
+    padding: 25px; /* Same padding as budget calculator */
     border-radius: 8px; /* Same border radius as budget calculator */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Same box shadow as budget calculator */
 }
@@ -162,7 +152,7 @@ form select {
 
 .bill-item button {
     background-color: lightpink;
-    color: white;
+    color: black;
     padding: 5px 10px;
     border: none;
     border-radius: 4px;
@@ -176,15 +166,12 @@ form select {
 
 .bill-item .edit-btn {
     background-color: black;
+    color: lightpink;
 }
 
 .bill-item .edit-btn:hover {
     background-color: #009900;
 }
-
-/* ===========================
-   RESPONSIVE DESIGN
-=========================== */
 
 @media (max-width: 768px) {
     /* Budget Calculator Section */
@@ -202,3 +189,62 @@ form select {
         width: 100%;
     }
 }
+
+
+/* Daily Quotes */
+/* Styling the main quote container */
+.quote-container {
+    text-align: center;
+    background: lightpink;
+    padding: 20px; /* All sides padding */
+    margin: 25px auto; /* Top and bottom margins, auto for centering horizontally */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 50px); /* Subtract the left and right margins from 100% */
+    max-width: 100%;
+    height: 100vh; /* Set to 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+}
+
+/* Styling the quote heading */
+.quote-heading {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Styling the quote box */
+.quote-box {
+    background-color: pink;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Styling the quote text */
+.quote-text {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Styling the quote author */
+.quote-author {
+    font-size: 16px;
+    color: black;
+    font-style: italic;
+}
+
+.simple-footer {
+    background-color: lightpink;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+    color: black;
+    border-top: 1px solid;
+  }
+  

@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const goalInput = document.getElementById('goal-input').value;
     const timeframe = document.getElementById('goal-timeframe').value;
     if (goalInput.trim()) {
-      const goalItem = { text: goalInput, timeframe: timeframe };
+      const goalItem = { text: goalInput, timeframe: timeframe, completed: false };
       saveGoal(goalItem);
       addGoalItemToDOM(goalItem);
       document.getElementById('goal-input').value = '';
@@ -127,11 +127,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const goalList = document.getElementById('goals-list');
     const goalDiv = document.createElement('div');
     goalDiv.classList.add('goal-item', `goal-${goalItem.timeframe}`);
-  
+
     if (goalItem.completed) {
       goalDiv.classList.add('completed');
     }
-  
+
     const circle = document.createElement('div');
     circle.classList.add('circle');
     if (goalItem.completed) {
@@ -142,10 +142,10 @@ document.addEventListener("DOMContentLoaded", function () {
       goalDiv.classList.toggle('completed');
       toggleGoalCompleteStatus(goalItem.text);
     });
-  
+
     const text = document.createElement('span');
     text.textContent = goalItem.text;
-  
+
     const deleteBtn = document.createElement('div');
     deleteBtn.classList.add('delete-btn');
     deleteBtn.textContent = '×';
@@ -153,18 +153,27 @@ document.addEventListener("DOMContentLoaded", function () {
       goalDiv.remove();
       deleteGoal(goalItem);
     });
-  
+
     const leftDiv = document.createElement('div');
     leftDiv.style.display = 'flex';
     leftDiv.style.alignItems = 'center';
     leftDiv.appendChild(circle);
     leftDiv.appendChild(text);
-  
+
     goalDiv.appendChild(leftDiv);
     goalDiv.appendChild(deleteBtn);
     goalList.appendChild(goalDiv);
   }
-  
-  
+
+  function toggleGoalCompleteStatus(text) {
+    let goals = JSON.parse(localStorage.getItem('goals')) || [];
+    goals = goals.map(goal => {
+      if (goal.text === text) {
+        goal.completed = !goal.completed;
+      }
+      return goal;
+    });
+    localStorage.setItem('goals', JSON.stringify(goals));
+  }
 
 });
