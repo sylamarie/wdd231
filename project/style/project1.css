@@ -170,8 +170,7 @@ header .navbar {
 }
 
 
-/* Responsive media query code for max width 400px */
-/* Common styles for all responsive views */
+
 @media screen and (max-width: 1024px) {
     .navbar .nav-menu {
         position: fixed;
@@ -626,7 +625,16 @@ header .navbar {
 .events .event:hover::after {
     display: flex;
 }
-
+.events .no-event {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: lightpink;
+}
 .add-event-wrapper {
     position: absolute;
     bottom: 100px;
@@ -651,7 +659,7 @@ header .navbar {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    color: #717172;
+    color: #b6b6b6;
     border-bottom: 1px solid white;
 }
 
@@ -783,20 +791,26 @@ header .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
     padding: 20px;
     height: 100vh;
 }
 
-.todo-goals-section .section-title {
+.todo-goals-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack the title and columns vertically */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
     text-align: center;
-    color: #000000;
+}
+
+.section-title {
     font-size: 30px;
     font-family: "Miniver", sans-serif;
     font-weight: 1000;
+    color: #000;
+    margin-bottom: 20px; /* Space between title and columns */
 }
-
-
 
 .todo-goals-container {
     display: flex;
@@ -964,6 +978,34 @@ input[type="text"], select {
       display: flex;
       flex-direction: column;
       gap: 25px;
+    }
+
+    .todo-goals-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+        width: 100%;
+        max-width: 1200px; /* Or adjust as needed */
+        margin: 0 auto; /* center the section */
+    }
+    
+    .todo-column,
+    .goals-column {
+        width: 90%; /* Stretchs most of the container width */
+        max-width: 600px; /* Or more if you want it really wide */
+        background-color: #000; /* Keep your black card look */
+        color: #fff;
+        /* padding: 1rem; */
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* optional, for some depth */
+        height: 100%;
+    }
+    
+    
+    .section-title {
+        margin-top: 70px;
     }
   
     /* Each box container */

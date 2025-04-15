@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function () {
     const addExpenseButton = document.getElementById("add-expense");
     const budgetForm = document.getElementById("budget-form");
